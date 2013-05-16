@@ -1,0 +1,30 @@
+<h1>Hosts</h1>
+
+<p><%= link_to 'Add a New Host', new_host_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Event</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @hosts.each do |host| %>
+    <tr>
+      <td><%= host.user_id %></td>
+      <td><%= host.event_id %></td>
+  
+      <td><%= link_to 'Show', host_url(host) %></td>
+      <td><%= link_to 'Edit', edit_host_url(host) %></td>
+      <td><%= link_to 'Destroy', host_url(host), method: 'delete', data: { confirm: "Do you really want to delete this host?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

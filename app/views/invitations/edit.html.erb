@@ -1,0 +1,31 @@
+<h1>Editing Invitation #<%= @invitation.id %></h1>
+
+
+<%= form_tag(invitation_url(@invitation), method: 'put') do %>
+
+  <div>
+    <%= label_tag :host_id %><br />
+    <%= number_field_tag :host_id, @invitation.host_id %>
+  </div>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @invitation.name %>
+  </div>
+
+  <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, @invitation.email %>
+  </div>
+
+  <div>
+    <%= label_tag :rsvp %><br />
+    <%= check_box_tag :rsvp, @invitation.rsvp? %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Invitation" %>
+  </div>
+
+<% end %>

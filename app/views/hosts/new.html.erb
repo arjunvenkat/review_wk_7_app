@@ -1,0 +1,21 @@
+<h1>New Host</h1>
+
+
+<%= form_tag(hosts_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :user_id %><br />
+    <%= number_field_tag :user_id %>
+  </div>
+
+    <div>
+    <%= label_tag :event_id %><br />
+    <%= number_field_tag :event_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create Host" %>
+  </div>
+<% end %>

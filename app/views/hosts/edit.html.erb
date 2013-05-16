@@ -1,0 +1,21 @@
+<h1>Editing Host #<%= @host.id %></h1>
+
+
+<%= form_tag(host_url(@host), method: 'put') do %>
+
+  <div>
+    <%= label_tag :user_id %><br />
+    <%= number_field_tag :user_id, @host.user_id %>
+  </div>
+
+  <div>
+    <%= label_tag :event_id %><br />
+    <%= number_field_tag :event_id, @host.event_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Host" %>
+  </div>
+
+<% end %>

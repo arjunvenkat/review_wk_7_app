@@ -1,0 +1,31 @@
+<h1>New Invitation</h1>
+
+
+<%= form_tag(invitations_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :host_id %><br />
+    <%= number_field_tag :host_id %>
+  </div>
+
+    <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+
+    <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email %>
+  </div>
+
+    <div>
+    <%= label_tag :rsvp %><br />
+    <%= check_box_tag :rsvp? %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create Invitation" %>
+  </div>
+<% end %>
