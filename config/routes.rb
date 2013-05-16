@@ -1,6 +1,8 @@
 InviteApp::Application.routes.draw do
-
-
+  # Routes for login/logout
+  get '/signin' => 'sessions#new', as: 'signin'
+  post '/sessions/create' => 'sessions#create', as: 'create_session'
+  get '/signout' => 'sessions#destroy', as: 'signout'
 
   # Routes for the Host resource:
   # CREATE
@@ -57,6 +59,7 @@ InviteApp::Application.routes.draw do
   # CREATE
   get '/users/new', controller: 'users', action: 'new', as: 'new_user'
   post '/users', controller: 'users', action: 'create'
+
 
   # READ
   get '/users', controller: 'users', action: 'index', as: 'users'
