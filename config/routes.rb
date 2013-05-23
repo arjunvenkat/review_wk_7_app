@@ -1,4 +1,7 @@
 InviteApp::Application.routes.draw do
+  resources :messages
+
+
   # Routes for login/logout
   get '/signin' => 'sessions#new', as: 'signin'
   post '/sessions/create' => 'sessions#create', as: 'create_session'
