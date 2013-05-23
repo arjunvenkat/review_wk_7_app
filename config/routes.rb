@@ -1,5 +1,17 @@
 InviteApp::Application.routes.draw do
+
+
+  resources :conversations
+
+
+  root to: 'pages#home'
+
   resources :messages
+
+  resource :admin do
+    resources :users
+  end
+
 
 
   # Routes for login/logout
